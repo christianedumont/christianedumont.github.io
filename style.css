@@ -1,0 +1,339 @@
+:root {
+  --color-1: #56BA9F;
+  --color-2: #8BCEB6;
+  --color-3: #D6F1E3;
+  --background: #F4FBF7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+
+  &hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #EEE;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.align-right {
+  text-align: right;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+.fas {
+  margin-right: 1%;
+}
+
+.left-column section,
+.right-column section {
+  padding: 1rem 1.5rem;
+}
+
+.left-column {
+  background-color: var(--color-2);
+  color: white;
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.right-column {
+  background-color: #FAFAFA;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-1);
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin: 0.5rem 0;
+  }
+}
+
+h2 .fas,
+h2 .far,
+#interets .fas {
+  padding-right: 0.5rem;
+}
+
+.fa-star,
+.fa-star-half-alt {
+  color: #FAFAFA;
+  font-size: 0.7rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#identity {
+  background-color: var(--color-1);
+  text-align: center;
+
+  img {
+    display: block;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+#contact {
+  a {
+    color: inherit;
+  }
+
+  .fas,
+  .fa-brands {
+    padding-right: 0.25rem;
+  }
+}
+
+#languages {
+  li {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#skills {
+
+  .grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .fa-brands {
+    font-size: 1.5rem;
+  }
+
+  ul.grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    li {
+      padding: 0.5rem;
+      text-align: center;
+      transition: background 0.5s;
+
+      &:hover {
+        background-color: #EEE;
+      }
+    }
+
+    .fa-brands,
+    .fa-solid {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.fa-html5 {
+  color: #F16529;
+}
+
+.fa-css3-alt {
+  color: #2AA9E0;
+}
+
+.fa-sass {
+  color: #CE679A;
+}
+
+.fa-js-square,
+.fa-js {
+  color: #F0DB4F;
+}
+
+.fa-react {
+  color: #00DCFD;
+}
+
+.fa-vuejs {
+  color: #3FB984;
+}
+
+.fa-php {
+  color: #8C9BD6;
+}
+
+.fa-database {
+  color: #F7911E;
+}
+
+.fa-bootstrap {
+  color: #563E7C;
+}
+
+.fa-drupal {
+  color: #009CDE;
+}
+
+.fa-store {
+  color: #E4005F;
+}
+
+.fa-wordpress {
+  color: #207296;
+}
+
+.fa-git-alt {
+  color: #F64D27;
+}
+
+.fa-docker {
+  color: #2596EE;
+}
+
+.fa-star {
+  font-size: 1rem;
+  color: gold;
+}
+
+footer {
+  background-color: var(--color-3);
+  padding: 0.5rem 5%;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: var(--background);
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+
+  html,
+  body,
+  main {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .left-column {
+    flex-basis: 29%;
+    color: #01579B;
+    background-color: white;
+    border-right: 1px solid #E1F5FE;
+  }
+
+  .right-column {
+    flex-basis: 69%;
+  }
+
+  footer {
+    display: none;
+  }
+
+}
