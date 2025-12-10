@@ -179,11 +179,14 @@ h2 .far,
   .grid {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
 
-    .development {
-      grid-column-start: 1;
-      grid-column-end: 3;
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .development {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
     }
   }
 
