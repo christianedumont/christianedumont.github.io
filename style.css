@@ -42,9 +42,11 @@ ul.unstyled {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  @media screen and (min-width: 1024px) {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .align-right {
@@ -177,6 +179,12 @@ h2 .far,
   .grid {
     display: grid;
     gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    .development {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 
   .fa-brands {
